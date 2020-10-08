@@ -18,11 +18,11 @@ function setup() {
 }
 
 function draw() {
-  background(200);
+  background(0);
   socket.emit('next', true);
   for(var part in body_pos) {
     if(body_pos[part] != -1){
-      fill(0);
+      fill(255);
       let x = width/2 - body_pos[part][0];
       let y = height/2 + body_pos[part][1];
       ellipse(x ,y , 10);
